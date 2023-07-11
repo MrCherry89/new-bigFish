@@ -1,9 +1,5 @@
 $inter: "Inter", sans-serif;
-$sf: "SF Pro Display";
 $babes: "Bebas Neue";
-$m: "Montserrat";
-$at: "Arsenica Trial";
-$aat: "Arsenica Alt Trial";
 
 $black: #0f0f0f;
 
@@ -599,7 +595,7 @@ button {
       line-height: 120%;
       margin-bottom: 40px;
       color: #fff;
-      font-family: $sf;
+      font-family: $inter;
 
       @media (max-width: 1024px) {
         font-size: 44px;
@@ -758,7 +754,7 @@ label.error {
       font-weight: 500;
       font-size: 80px;
       line-height: 120%;
-      font-family: $sf;
+      font-family: $inter;
       margin-bottom: 80px;
       color: #fff;
 
@@ -1230,20 +1226,20 @@ label.error {
     }
 
     100% {
-      width: 3600px;
-      height: 3600px;
-      margin-left: -1800px;
-      margin-top: -1800px;
+      width: 3800px;
+      height: 3800px;
+      margin-left: -1900px;
+      margin-top: -1900px;
       background-color: $black;
     }
   }
 
   @keyframes desplode-big {
     0% {
-      width: 3600px;
-      height: 3600px;
-      margin-left: -1800px;
-      margin-top: -1800px;
+      width: 3800px;
+      height: 3800px;
+      margin-left: -1900px;
+      margin-top: -1900px;
       background-color: $black;
     }
 
@@ -1590,6 +1586,7 @@ label.error {
 
 .cases {
   padding: 0 40px 200px;
+  overflow: hidden;
   @media (max-width: 1440px) {
     padding: 0 30px 150px;
   }
@@ -1833,7 +1830,7 @@ label.error {
     @include flex;
     margin-left: 12.5%;
     @media (max-width: 1200px) {
-      margin-left: 4%;
+      margin-left: 1%;
     }
     @media (max-width: 1024px) {
       display: none;
@@ -1856,7 +1853,7 @@ label.error {
       > div {
         font-weight: 500;
         color: white;
-        font-family: $sf;
+        font-family: $inter;
         @include flex;
         @include align-center;
         p {
@@ -1971,11 +1968,14 @@ label.error {
         @media (max-width: 767px) {
           padding: 8px 20px;
         }
+        .button_text_container {
+          font-family: $inter;
+        }
       }
       &.white-btn {
         @media (min-width: 1025px) {
           &:hover {
-            border-left-color: transparent;
+            // border-left-color: transparent;
           }
         }
         @media (max-width: 400px) {
@@ -1983,6 +1983,11 @@ label.error {
         }
       }
       &.transparent-btn {
+        .drop-menu-wrap {
+          span {
+            font-family: $inter;
+          }
+        }
         @media (max-width: 400px) {
           border: none;
           .button_su_inner {
@@ -2184,7 +2189,7 @@ label.error {
           font-size: 90px;
           line-height: 120%;
           color: #fff;
-          font-family: $sf;
+          font-family: $inter;
           @include flex;
           @include dir-col;
           position: relative;
@@ -2201,7 +2206,7 @@ label.error {
 
           span {
             color: #fff;
-            font-family: $sf;
+            font-family: $inter;
             font-weight: 500;
             font-size: 90px;
             line-height: 120%;
@@ -2264,11 +2269,10 @@ label.error {
       padding: 0;
       @include justify-center;
     }
-
     > span {
       color: #fff;
       font-weight: 400;
-      font-family: $sf;
+      font-family: $inter;
       margin-left: 20px;
       font-size: 17px;
       transition: 0.8s;
@@ -2307,38 +2311,6 @@ label.error {
             width: 30px;
           }
         }
-      }
-    }
-  }
-
-  .drop-icon {
-    display: none;
-
-    @include flex;
-    @include align-center;
-    @include justify-center;
-    @include dir-col;
-    width: 66px;
-    height: 66px;
-    border-radius: 50%;
-    background: #fff;
-
-    span {
-      width: 30px;
-      height: 3px;
-      border-radius: 8px;
-      background: red;
-      margin: 3px 0;
-    }
-
-    @media (max-width: 767px) {
-      width: 44px;
-      height: 44px;
-
-      span {
-        width: 20px;
-        margin: 2px 0;
-        height: 2px;
       }
     }
   }
@@ -2428,10 +2400,10 @@ label.error {
         left: 0;
         top: 0;
         background: $black;
-        padding: 70px 40px;
+        padding: 10vw 40px 70px;
         z-index: 3;
         @include flex;
-        @include align-center;
+        align-items: flex-start;
         @include justify-center;
         width: 0;
         height: 100%;
@@ -2455,7 +2427,7 @@ label.error {
         .video {
           width: 100%;
           max-width: 1220px;
-          height: 25%;
+          height: 15vw;
           border-radius: 10px;
           overflow: hidden;
 
@@ -2465,11 +2437,11 @@ label.error {
           }
 
           @media (max-width: 1440px) {
-            height: 40%;
+            height: 25vw;
           }
 
           @media (max-width: 767px) {
-            height: 40%;
+            height: 37%;
             margin: 0;
           }
 
@@ -2481,13 +2453,16 @@ label.error {
             }
 
             @media (max-width: 1440px) {
-              height: 60%;
+              height: 25vw;
             }
 
             @media (max-width: 1024px) {
               max-width: 600px;
               margin-bottom: 0;
               height: 50%;
+            }
+            @media (max-width: 767px) {
+              height: 37%;
             }
           }
 
@@ -2515,7 +2490,7 @@ label.error {
         @media (max-width: 1440px) {
           width: 136px;
           height: 143px;
-          top: 444px;
+          top: 430px;
         }
 
         @media (max-width: 1024px) {
@@ -2612,7 +2587,7 @@ label.error {
         text-transform: uppercase;
         margin-bottom: 60px;
         @media (max-width: 1200px) {
-          font-size: 5vw;
+          font-size: 4vw;
         }
         @media (max-width: 1024px) {
           margin-left: 14vw;
@@ -2628,7 +2603,7 @@ label.error {
           font-family: "Bedstead";
           margin-right: 5px;
           @media (max-width: 1200px) {
-            font-size: 4vw;
+            font-size: 3vw;
           }
           @media (max-width: 767px) {
             margin-right: 0;
@@ -2691,7 +2666,7 @@ label.error {
           font-size: 300px;
           line-height: 100%;
           font-family: $inter;
-          font-weight: 300;
+          font-weight: 100;
           display: inline-block;
           text-transform: uppercase;
           color: white;
@@ -2744,14 +2719,14 @@ label.error {
         }
         .transparent-btn {
           border-color: $black;
+          margin-right: -1px;
 
           .button_su_inner {
             background: $black;
           }
           @media (min-width: 1025px) {
             &:hover {
-              border-color: $black;
-              border-right-color: white;
+              border-right-color: transparent;
             }
           }
           @media (max-width: 400px) {

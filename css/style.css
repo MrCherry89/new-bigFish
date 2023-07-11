@@ -669,7 +669,7 @@ button:focus {
   line-height: 120%;
   margin-bottom: 40px;
   color: #fff;
-  font-family: "SF Pro Display";
+  font-family: "Inter", sans-serif;
 }
 @media (max-width: 1024px) {
   #thank-popup .popup-body h2 {
@@ -830,7 +830,7 @@ label.error:after {
   font-weight: 500;
   font-size: 80px;
   line-height: 120%;
-  font-family: "SF Pro Display";
+  font-family: "Inter", sans-serif;
   margin-bottom: 80px;
   color: #fff;
 }
@@ -1323,19 +1323,19 @@ label.error:after {
       background-color: #0f0f0f;
     }
     100% {
-      width: 3600px;
-      height: 3600px;
-      margin-left: -1800px;
-      margin-top: -1800px;
+      width: 3800px;
+      height: 3800px;
+      margin-left: -1900px;
+      margin-top: -1900px;
       background-color: #0f0f0f;
     }
   }
   @keyframes desplode-big {
     0% {
-      width: 3600px;
-      height: 3600px;
-      margin-left: -1800px;
-      margin-top: -1800px;
+      width: 3800px;
+      height: 3800px;
+      margin-left: -1900px;
+      margin-top: -1900px;
       background-color: #0f0f0f;
     }
     100% {
@@ -1681,6 +1681,7 @@ label.error:after {
 
 .cases {
   padding: 0 40px 200px;
+  overflow: hidden;
 }
 @media (max-width: 1440px) {
   .cases {
@@ -1988,7 +1989,7 @@ label.error:after {
 }
 @media (max-width: 1200px) {
   .header-top .links {
-    margin-left: 4%;
+    margin-left: 1%;
   }
 }
 @media (max-width: 1024px) {
@@ -2018,7 +2019,7 @@ label.error:after {
 .header-top .links .link-wrap > div {
   font-weight: 500;
   color: white;
-  font-family: "SF Pro Display";
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2161,15 +2162,16 @@ label.error:after {
     padding: 8px 20px;
   }
 }
-@media (min-width: 1025px) {
-  .header-top .buttons .button-hover.white-btn:hover {
-    border-left-color: transparent;
-  }
+.header-top .buttons .button-hover .button_su_inner .button_text_container {
+  font-family: "Inter", sans-serif;
 }
 @media (max-width: 400px) {
   .header-top .buttons .button-hover.white-btn {
     display: none;
   }
+}
+.header-top .buttons .button-hover.transparent-btn .drop-menu-wrap span {
+  font-family: "Inter", sans-serif;
 }
 @media (max-width: 400px) {
   .header-top .buttons .button-hover.transparent-btn {
@@ -2409,7 +2411,7 @@ label.error:after {
   font-size: 90px;
   line-height: 120%;
   color: #fff;
-  font-family: "SF Pro Display";
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2433,7 +2435,7 @@ label.error:after {
 }
 .header-top .menu-wrap .main-menu li a span {
   color: #fff;
-  font-family: "SF Pro Display";
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 90px;
   line-height: 120%;
@@ -2500,7 +2502,7 @@ label.error:after {
 .header-top .drop-menu-wrap > span {
   color: #fff;
   font-weight: 400;
-  font-family: "SF Pro Display";
+  font-family: "Inter", sans-serif;
   margin-left: 20px;
   font-size: 17px;
   transition: 0.8s;
@@ -2548,44 +2550,6 @@ label.error:after {
   }
   .header-top .drop-menu-wrap .drop-icons span:last-child {
     width: 30px;
-  }
-}
-.header-top .drop-icon {
-  display: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  background: #fff;
-}
-.header-top .drop-icon span {
-  width: 30px;
-  height: 3px;
-  border-radius: 8px;
-  background: red;
-  margin: 3px 0;
-}
-@media (max-width: 767px) {
-  .header-top .drop-icon {
-    width: 44px;
-    height: 44px;
-  }
-  .header-top .drop-icon span {
-    width: 20px;
-    margin: 2px 0;
-    height: 2px;
   }
 }
 
@@ -2685,14 +2649,12 @@ label.error:after {
   left: 0;
   top: 0;
   background: #0f0f0f;
-  padding: 70px 40px;
+  padding: 10vw 40px 70px;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2718,7 +2680,7 @@ label.error:after {
 .header .header-info .header-video-wrap .video-wrap .video {
   width: 100%;
   max-width: 1220px;
-  height: 25%;
+  height: 15vw;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -2730,12 +2692,12 @@ label.error:after {
 }
 @media (max-width: 1440px) {
   .header .header-info .header-video-wrap .video-wrap .video {
-    height: 40%;
+    height: 25vw;
   }
 }
 @media (max-width: 767px) {
   .header .header-info .header-video-wrap .video-wrap .video {
-    height: 40%;
+    height: 37%;
     margin: 0;
   }
 }
@@ -2749,7 +2711,7 @@ label.error:after {
 }
 @media (max-width: 1440px) {
   .header .header-info .header-video-wrap .video-wrap .video.open {
-    height: 60%;
+    height: 25vw;
   }
 }
 @media (max-width: 1024px) {
@@ -2757,6 +2719,11 @@ label.error:after {
     max-width: 600px;
     margin-bottom: 0;
     height: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .header .header-info .header-video-wrap .video-wrap .video.open {
+    height: 37%;
   }
 }
 .header .header-info .header-video-wrap .video-wrap .video iframe {
@@ -2790,7 +2757,7 @@ label.error:after {
   .header .header-info .header-video-wrap .circle {
     width: 136px;
     height: 143px;
-    top: 444px;
+    top: 430px;
   }
 }
 @media (max-width: 1024px) {
@@ -2902,7 +2869,7 @@ label.error:after {
 }
 @media (max-width: 1200px) {
   .header .header-info .header-info-wrap .header-subtitle {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 @media (max-width: 1024px) {
@@ -2925,7 +2892,7 @@ label.error:after {
 }
 @media (max-width: 1200px) {
   .header .header-info .header-info-wrap .header-subtitle span {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 @media (max-width: 767px) {
@@ -3004,7 +2971,7 @@ label.error:after {
   font-size: 300px;
   line-height: 100%;
   font-family: "Inter", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   display: inline-block;
   text-transform: uppercase;
   color: white;
@@ -3055,14 +3022,14 @@ label.error:after {
 }
 .header.fixed .header-top .buttons .transparent-btn {
   border-color: #0f0f0f;
+  margin-right: -1px;
 }
 .header.fixed .header-top .buttons .transparent-btn .button_su_inner {
   background: #0f0f0f;
 }
 @media (min-width: 1025px) {
   .header.fixed .header-top .buttons .transparent-btn:hover {
-    border-color: #0f0f0f;
-    border-right-color: white;
+    border-right-color: transparent;
   }
 }
 @media (max-width: 400px) {

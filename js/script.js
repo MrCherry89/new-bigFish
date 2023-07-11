@@ -3,7 +3,7 @@ $(document).ready(function () {
     var header = $(".header"),
       scroll = $(window).scrollTop();
 
-    if (scroll >= 100) header.addClass("fixed");
+    if (scroll >= header.height()) header.addClass("fixed");
     else header.removeClass("fixed");
   });
 
@@ -123,57 +123,6 @@ $(document).ready(function () {
     },
   });
 
-  $(".portfolio-popup-list li a").on("click", function (e) {
-    e.preventDefault();
-    $(this).closest("ul").find("a").removeClass("active");
-    $(this).addClass("active");
-    var type = $(this).closest("ul").data("type");
-    var btn = $(".portfolio-btn a[data-type=" + type + "]");
-    var btnText = btn.find(".text");
-    var selectedText = $(this).text();
-    btnText.text(selectedText);
-    var svgIcon = btn.find("svg");
-    svgIcon.addClass("hide");
-    var closeBtn = btn.find(".close");
-    closeBtn.addClass("show");
-    $(this).closest(".main-popup").magnificPopup("close");
-  });
-
-  $(".portfolio-buttons .portfolio-btn .close").on("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(this).removeClass("show");
-    $(this)
-      .closest(".portfolio-btn")
-      .find(".button_text_container svg")
-      .removeClass("hide");
-    var type = $(this).closest("a").data("type");
-    var list = $(".portfolio-popup-list[data-type=" + type + "]");
-    list.find("a").removeClass("active");
-    var defaultText = $(this)
-      .closest(".portfolio-btn")
-      .find(".text")
-      .data("default");
-    $(this).closest(".portfolio-btn").find(".text").text(defaultText);
-  });
-
-  $(".main-popup .reset").on("click", function (e) {
-    e.preventDefault();
-    var type = $(this)
-      .closest(".popup-body")
-      .find(".portfolio-popup-list")
-      .data("type");
-    var btn = $(".button_su_inner[data-type=" + type + "]");
-    btn.find(".close").removeClass("show");
-    console.log(type);
-    btn.find("svg").removeClass("hide");
-    var list = $(".portfolio-popup-list[data-type=" + type + "]");
-    list.find("a").removeClass("active");
-    var defaultText = btn.find(".text").data("default");
-    btn.find(".text").text(defaultText);
-    $(this).closest(".main-popup").magnificPopup("close");
-  });
-
   $(".portfolio-project-wrap .button-hover").on("click", function (e) {
     e.preventDefault();
     $(this)
@@ -251,55 +200,6 @@ $(document).ready(function () {
         }
       }, 20);
   }
-
-  $(".drop-list-item .item-heading").on("click", function (e) {
-    e.preventDefault();
-    if ($(this).find("span").hasClass("rotate")) {
-      $(this).find("span").removeClass("rotate");
-    } else {
-      $(".drop-list-item span").removeClass("rotate");
-      $(this).find("span").addClass("rotate");
-    }
-    $(".drop-list-item").removeClass("opened");
-    $(".item-body").removeClass("active");
-    $(this).closest(".drop-list-item").find(".item-body").addClass("active");
-    $(this).closest(".drop-list-item").addClass("opened");
-    $(".item-body:not(.active)").slideUp();
-    $(".drop-list-item:not(.opened)").removeClass("active");
-    $(this).closest(".drop-list-item").find(".item-body").slideToggle();
-    $(this).closest(".drop-list-item").toggleClass("active");
-  });
-
-  $(".develop-about--akkordion .develop-about__akkordion-title").on(
-    "click",
-    function () {
-      $(this)
-        .closest(".develop-about__akkordion-item")
-        .find(".develop-about__akkordion-text")
-        .slideToggle();
-    }
-  );
-
-  $(".accordion-list-item .item-heading").on("click", function (e) {
-    e.preventDefault();
-    if ($(this).find(".show-img").hasClass("rotate")) {
-      $(this).find(".show-img").removeClass("rotate");
-    } else {
-      $(".accordion-list-item .show-img").removeClass("rotate");
-      $(this).find(".show-img").addClass("rotate");
-    }
-    $(".accordion-list-item").removeClass("opened");
-    $(".item-body").removeClass("active");
-    $(this)
-      .closest(".accordion-list-item")
-      .find(".item-body")
-      .addClass("active");
-    $(this).closest(".accordion-list-item").addClass("opened");
-    $(".item-body:not(.active)").slideUp();
-    $(".accordion-list-item:not(.opened)").removeClass("active");
-    $(this).closest(".accordion-list-item").find(".item-body").slideToggle();
-    $(this).closest(".accordion-list-item").toggleClass("active");
-  });
 
   (function () {
     "use strict";
