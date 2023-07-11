@@ -218,9 +218,12 @@
     max-width: 290px;
     margin-bottom: 40px;
     overflow: hidden;
+    margin-left: 32vw;
+    @media (max-width: 1024px) {
+      margin-left: 14vw;
+    }
     @media (max-width: 767px) {
       max-width: 210px;
-      margin-left: auto;
     }
     span {
       color: $black;
@@ -238,8 +241,18 @@
       }
     }
   }
+  .arrow-btn {
+    margin-left: 32vw;
+    @media (max-width: 1024px) {
+      margin-left: 14vw;
+    }
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
   .big-btn {
     margin-top: 200px;
+
     @media (max-width: 1440px) {
       margin-top: 150px;
     }
@@ -253,16 +266,16 @@
 }
 
 .about {
-  padding: 200px 40px 0;
+  padding: 200px 40px;
   @media (max-width: 1440px) {
-    padding: 150px 0 0 30px;
+    padding: 150px 0 150px 30px;
   }
   @media (max-width: 1024px) {
-    padding: 120px 0 0 20px;
+    padding: 120px 0 120px 20px;
   }
 
   @media (max-width: 767px) {
-    padding: 80px 0 0 15px;
+    padding: 80px 0 80px 15px;
   }
   .about-title {
     max-width: 1570px;
@@ -297,7 +310,7 @@
   }
   .about-subtitle {
     max-width: 290px;
-    margin-left: 30%;
+    margin-left: 32vw;
     margin-bottom: 80px;
     overflow: hidden;
     @media (max-width: 1440px) {
@@ -306,10 +319,9 @@
     }
     @media (max-width: 1200px) {
       margin-bottom: 40px;
-      margin-left: 50%;
     }
     @media (max-width: 1024px) {
-      margin-left: 30%;
+      margin-left: 14vw;
     }
     span {
       font-size: 17px;
@@ -331,11 +343,18 @@
   }
   .arrow-btn {
     margin-top: 80px;
+    margin-left: 32vw;
     @media (max-width: 1440px) {
       margin-top: 60px;
     }
     @media (max-width: 1200px) {
       margin-top: 40px;
+    }
+    @media (max-width: 1024px) {
+      margin-left: 14vw;
+    }
+    @media (max-width: 767px) {
+      margin-left: 0;
     }
     .arrow {
       margin-left: 30px;
@@ -350,9 +369,6 @@
       background: $black;
       padding: 1px;
       transition: 0.3s;
-      &:hover {
-        border-radius: 20px;
-      }
       @media (max-width: 1440px) {
         min-height: 252px;
         width: 450px;
@@ -377,9 +393,6 @@
         @include justify-between;
         width: 100%;
         transition: 0.3s;
-        &:hover {
-          border-radius: 40px;
-        }
         @media (max-width: 1200px) {
           padding: 15px;
         }
@@ -390,7 +403,7 @@
           @include flex;
           @include justify-between;
           margin-bottom: 20px;
-          .text {
+          p {
             max-width: 280px;
             font-size: 16px;
             line-height: 130%;
@@ -398,6 +411,7 @@
             color: $black;
             text-transform: uppercase;
             text-align: justify;
+            overflow: hidden;
             @media (max-width: 1440px) {
               font-size: 13px;
               max-width: 220px;
@@ -408,6 +422,23 @@
             @media (max-width: 767px) {
               font-size: 10px;
               max-width: 170px;
+            }
+            span {
+              font-size: 16px;
+              line-height: 130%;
+              font-family: $inter;
+              color: $black;
+              text-transform: uppercase;
+              display: block;
+              @media (max-width: 1440px) {
+                font-size: 13px;
+              }
+              @media (max-width: 1200px) {
+                font-size: 12px;
+              }
+              @media (max-width: 767px) {
+                font-size: 10px;
+              }
             }
           }
           .number {
@@ -487,21 +518,22 @@
       }
     }
     &.right {
-      margin-left: 30vw;
+      margin-left: 32vw;
       margin-bottom: 90px;
       @media (max-width: 1440px) {
         margin-bottom: 60px;
+        margin-left: auto;
       }
       @media (max-width: 1024px) {
-        margin-left: auto;
         margin-bottom: 40px;
       }
     }
     &.left {
-      margin-right: 30%;
+      margin-left: 32vw;
       margin-top: 90px;
       @media (max-width: 1440px) {
         margin-top: 60px;
+        margin-left: 0;
       }
       @media (max-width: 1024px) {
         margin-top: 40px;

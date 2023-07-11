@@ -14,6 +14,9 @@ html {
   &.overflow {
     overflow: hidden;
   }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 * {
@@ -1507,6 +1510,9 @@ label.error {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .line {
+    @include flex;
+  }
   .arrow {
     transition: 0.5s;
     margin-left: 130px;
@@ -1583,18 +1589,25 @@ label.error {
 }
 
 .cases {
-  padding: 200px 40px;
+  padding: 0 40px 200px;
   @media (max-width: 1440px) {
-    padding: 150px 30px;
+    padding: 0 30px 150px;
   }
   @media (max-width: 1024px) {
-    padding: 120px 20px;
+    padding: 0 20px 120px;
   }
 
   @media (max-width: 767px) {
-    padding: 80px 15px;
+    padding: 0 15px 80px;
   }
   .arrow-btn {
+    margin-left: 32vw;
+    @media (max-width: 1024px) {
+      margin-left: 14vw;
+    }
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
     .arrow {
       margin-left: 30px;
     }
@@ -1745,6 +1758,12 @@ label.error {
     0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
 }
 
+@media (max-width: 767px) {
+  .portfolio-item-click-follower {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) {
   .portfolio-item-click-follower.active {
     opacity: 1;
@@ -1812,6 +1831,10 @@ label.error {
   }
   .links {
     @include flex;
+    margin-left: 12.5%;
+    @media (max-width: 1200px) {
+      margin-left: 4%;
+    }
     @media (max-width: 1024px) {
       display: none;
     }
@@ -1840,55 +1863,19 @@ label.error {
           font-size: 17px;
           transition: 0.3s;
           font-family: $inter;
+          text-transform: uppercase;
+          margin-right: 7px;
         }
-        a {
-          font-weight: 500;
-          color: white;
-          font-family: $inter;
-          line-height: 120%;
-          @include flex;
-          @include dir-col;
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          @media (max-width: 1440px) {
-            font-size: 14px;
+        .arrow-btn {
+          border: none;
+          .line {
+            @include flex;
           }
-
-          span {
-            font-weight: 400;
-            color: white;
-            font-family: $inter;
-            line-height: 120%;
+          .letter {
             font-size: 17px;
+            font-family: $inter;
+            color: white;
             text-transform: uppercase;
-            transition: 0.3s;
-            margin-left: 10px;
-            @media (max-width: 1440px) {
-              font-size: 14px;
-            }
-
-            &.hide-text {
-              position: absolute;
-              left: 0;
-              transform: translateY(100%);
-
-              @media (max-width: 1024px) {
-                display: none;
-              }
-            }
-          }
-
-          @media (min-width: 1025px) {
-            &:hover {
-              .hide-text {
-                transform: translateY(0);
-              }
-
-              .text {
-                transform: translateY(-100%);
-              }
-            }
           }
         }
       }
@@ -1951,7 +1938,7 @@ label.error {
   .menu-block {
     max-width: 445px;
     width: 100%;
-    @media (max-width: 1200px) {
+    @media (max-width: 1440px) {
       max-width: 320px;
     }
     @media (max-width: 1024px) {
@@ -1966,19 +1953,19 @@ label.error {
   }
   .buttons {
     @include flex;
-    @media (max-width: 1200px) {
+    @media (max-width: 1440px) {
       justify-content: flex-end;
     }
     .button-hover {
       width: 50%;
-      @media (max-width: 1200px) {
+      @media (max-width: 1440px) {
         width: auto;
       }
       .button_su_inner {
         width: 100%;
         height: 100%;
         align-items: center;
-        @media (max-width: 1200px) {
+        @media (max-width: 1440px) {
           padding: 11px 30px;
         }
         @media (max-width: 767px) {
@@ -2401,16 +2388,11 @@ label.error {
       top: 0;
       left: 0;
       @include flex;
-      padding-bottom: 130px;
       padding-left: 40px;
       transition: 0.3s;
 
       @media (max-width: 1440px) {
         padding-left: 30px;
-        padding-bottom: 100px;
-      }
-      @media (max-width: 1200px) {
-        padding-bottom: 60px;
       }
       @media (max-width: 1024px) {
         padding-left: 20px;
@@ -2520,17 +2502,29 @@ label.error {
 
       .circle {
         position: relative;
-        margin-top: auto;
+        width: 165px;
+        height: 165px;
+        @include flex;
+        @include align-center;
+        @include justify-center;
         z-index: 4;
-
+        top: 570px;
+        @media (max-width: 1700px) {
+          top: 470px;
+        }
         @media (max-width: 1440px) {
           width: 136px;
           height: 143px;
+          top: 444px;
         }
 
         @media (max-width: 1024px) {
           width: 90px;
           height: 90px;
+          top: 390px;
+        }
+        @media (max-width: 767px) {
+          top: inherit;
         }
 
         &.open {
@@ -2591,35 +2585,37 @@ label.error {
 
     .header-info-wrap {
       width: 100%;
-      padding: 200px 40px 100px 12vw;
+      padding: 200px 40px 100px 40px;
       @include flex;
       @include dir-col;
-      @include justify-between;
       @media (max-width: 1700px) {
-        padding: 160px 40px 100px 12vw;
+        padding: 160px 40px 100px 40px;
       }
       @media (max-width: 1440px) {
-        padding: 160px 30px 100px 12vw;
+        padding: 160px 30px 100px 30px;
       }
       @media (max-width: 1200px) {
         padding-bottom: 50px;
       }
       @media (max-width: 1024px) {
-        padding: 130px 20px 40px 12vw;
+        padding: 130px 20px 40px 20px;
       }
       @media (max-width: 767px) {
-        padding: 140px 20px 40px;
+        padding: 140px 10px 40px;
       }
       .header-subtitle {
-        margin-left: auto;
+        margin-left: 32vw;
         color: white;
-        font-size: 3vw;
+        font-size: 4vw;
         font-family: $inter;
         font-weight: normal;
         text-transform: uppercase;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         @media (max-width: 1200px) {
-          font-size: 4vw;
+          font-size: 5vw;
+        }
+        @media (max-width: 1024px) {
+          margin-left: 14vw;
         }
         @media (max-width: 767px) {
           order: 2;
@@ -2628,14 +2624,13 @@ label.error {
           font-size: 6vw;
         }
         span {
-          font-size: 2vw;
+          font-size: 3vw;
           font-family: "Bedstead";
           margin-right: 5px;
           @media (max-width: 1200px) {
-            font-size: 3vw;
+            font-size: 4vw;
           }
           @media (max-width: 767px) {
-            font-size: 4vw;
             margin-right: 0;
           }
         }
@@ -2656,8 +2651,11 @@ label.error {
       }
       .header-texts {
         max-width: 290px;
-        margin-left: auto;
+        margin-left: 32vw;
         margin-right: 5%;
+        @media (max-width: 1024px) {
+          margin-left: 14vw;
+        }
         @media (max-width: 767px) {
           order: 1;
           margin: 0 auto 40px;
@@ -2678,7 +2676,7 @@ label.error {
         }
       }
       .header-title {
-        margin-top: 20px;
+        margin-top: 40px;
         text-align: center;
         overflow: hidden;
         @media (max-width: 1024px) {
@@ -2690,13 +2688,22 @@ label.error {
           margin-bottom: 40px;
         }
         span {
-          font-size: 15vw;
+          font-size: 300px;
           line-height: 100%;
           font-family: $inter;
           font-weight: 300;
           display: inline-block;
           text-transform: uppercase;
           color: white;
+          @media (max-width: 1700px) {
+            font-size: 225px;
+          }
+          @media (max-width: 1440px) {
+            font-size: 170px;
+          }
+          @media (max-width: 1024px) {
+            font-size: 130px;
+          }
           @media (max-width: 767px) {
             font-size: 20vw;
           }
@@ -2708,9 +2715,6 @@ label.error {
   &.fixed {
     .header-top {
       background: white;
-      box-shadow: 1px -1px 13px 0px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 1px -1px 13px 0px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 1px -1px 13px 0px rgba(0, 0, 0, 0.2);
 
       .logo-img {
         display: none;
