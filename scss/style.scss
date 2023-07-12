@@ -393,6 +393,10 @@
         @include justify-between;
         width: 100%;
         transition: 0.3s;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
         @media (max-width: 1200px) {
           padding: 15px;
         }
@@ -403,6 +407,8 @@
           @include flex;
           @include justify-between;
           margin-bottom: 20px;
+          position: relative;
+          z-index: 2;
           p {
             max-width: 280px;
             font-size: 16px;
@@ -427,7 +433,7 @@
               font-size: 16px;
               line-height: 130%;
               font-family: $inter;
-              color: $black;
+              color: white;
               text-transform: uppercase;
               display: block;
               @media (max-width: 1440px) {
@@ -444,7 +450,7 @@
           .number {
             font-size: 50px;
             font-family: $inter;
-            color: $black;
+            color: white;
             @media (max-width: 1440px) {
               font-size: 40px;
             }
@@ -459,8 +465,10 @@
         .name {
           font-family: "Bedstead";
           font-size: 24px;
-          color: $black;
+          color: white;
           text-transform: uppercase;
+          position: relative;
+          z-index: 2;
           @media (max-width: 1440px) {
             font-size: 20px;
           }
@@ -471,6 +479,47 @@
       }
     }
   }
+}
+
+.image > .image__element,
+.image__wrap {
+  border-radius: inherit;
+  grid-area: 1/1/2/2;
+  height: 100%;
+  position: relative;
+  transform-origin: inherit;
+  width: 100%;
+  will-change: transform;
+}
+
+.image__wrap {
+  overflow: hidden;
+}
+
+.image {
+  cursor: pointer;
+  display: grid;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+}
+.image--style-1 {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  @media (max-width: 767px) {
+    border-radius: 10px;
+  }
+}
+
+.image__element {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .technologies {

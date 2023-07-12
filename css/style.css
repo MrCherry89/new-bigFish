@@ -3035,7 +3035,7 @@ label.error:after {
     border-color: white;
   }
   .header.fixed .header-top .buttons .transparent-btn .button_su_inner {
-    background: white;
+    background: none;
   }
   .header.fixed .header-top .buttons .transparent-btn .drop-icons span {
     background: #0f0f0f;
@@ -3627,6 +3627,10 @@ label.error:after {
   justify-content: space-between;
   width: 100%;
   transition: 0.3s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
 }
 @media (max-width: 1200px) {
   .about .about-slider .item .item-wrap {
@@ -3646,6 +3650,8 @@ label.error:after {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
 }
 .about .about-slider .item .item-wrap .top p {
   max-width: 280px;
@@ -3678,7 +3684,7 @@ label.error:after {
   font-size: 16px;
   line-height: 130%;
   font-family: "Inter", sans-serif;
-  color: #0f0f0f;
+  color: white;
   text-transform: uppercase;
   display: block;
 }
@@ -3700,7 +3706,7 @@ label.error:after {
 .about .about-slider .item .item-wrap .top .number {
   font-size: 50px;
   font-family: "Inter", sans-serif;
-  color: #0f0f0f;
+  color: white;
 }
 @media (max-width: 1440px) {
   .about .about-slider .item .item-wrap .top .number {
@@ -3720,8 +3726,10 @@ label.error:after {
 .about .about-slider .item .item-wrap .name {
   font-family: "Bedstead";
   font-size: 24px;
-  color: #0f0f0f;
+  color: white;
   text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 1440px) {
   .about .about-slider .item .item-wrap .name {
@@ -3732,6 +3740,50 @@ label.error:after {
   .about .about-slider .item .item-wrap .name {
     font-size: 16px;
   }
+}
+
+.image > .image__element,
+.image__wrap {
+  border-radius: inherit;
+  grid-area: 1/1/2/2;
+  height: 100%;
+  position: relative;
+  transform-origin: inherit;
+  width: 100%;
+  will-change: transform;
+}
+
+.image__wrap {
+  overflow: hidden;
+}
+
+.image {
+  cursor: pointer;
+  display: grid;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.image--style-1 {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .image--style-1 {
+    border-radius: 10px;
+  }
+}
+
+.image__element {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .technologies {
