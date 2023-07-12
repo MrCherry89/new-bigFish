@@ -3708,7 +3708,7 @@ label.error:after {
   font-size: 16px;
   line-height: 130%;
   font-family: "Inter", sans-serif;
-  color: white;
+  color: #0f0f0f;
   text-transform: uppercase;
   display: block;
 }
@@ -3730,7 +3730,7 @@ label.error:after {
 .about .about-slider .item .item-wrap .top .number {
   font-size: 50px;
   font-family: "Inter", sans-serif;
-  color: white;
+  color: #0f0f0f;
 }
 @media (max-width: 1440px) {
   .about .about-slider .item .item-wrap .top .number {
@@ -3750,7 +3750,7 @@ label.error:after {
 .about .about-slider .item .item-wrap .name {
   font-family: "Bedstead";
   font-size: 24px;
-  color: white;
+  color: #0f0f0f;
   text-transform: uppercase;
   position: relative;
   z-index: 2;

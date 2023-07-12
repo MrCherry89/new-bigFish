@@ -433,7 +433,7 @@
               font-size: 16px;
               line-height: 130%;
               font-family: $inter;
-              color: white;
+              color: $black;
               text-transform: uppercase;
               display: block;
               @media (max-width: 1440px) {
@@ -450,7 +450,7 @@
           .number {
             font-size: 50px;
             font-family: $inter;
-            color: white;
+            color: $black;
             @media (max-width: 1440px) {
               font-size: 40px;
             }
@@ -465,7 +465,7 @@
         .name {
           font-family: "Bedstead";
           font-size: 24px;
-          color: white;
+          color: $black;
           text-transform: uppercase;
           position: relative;
           z-index: 2;
