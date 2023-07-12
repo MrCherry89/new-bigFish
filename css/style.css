@@ -2015,6 +2015,7 @@ label.error:after {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 .header-top .links .link-wrap > div {
   font-weight: 500;
@@ -2996,9 +2997,6 @@ label.error:after {
     font-size: 20vw;
   }
 }
-.header.fixed .header-top {
-  background: white;
-}
 .header.fixed .header-top .logo-img {
   display: none;
 }
@@ -3915,6 +3913,9 @@ label.error:after {
   left: 0;
 }
 .technologies .right-info .links-wrap button:hover:after {
+  width: 100%;
+}
+.technologies .right-info .links-wrap button.active:after {
   width: 100%;
 }
 .technologies .right-info .links-wrap .links {

@@ -1849,6 +1849,7 @@ label.error {
     .link-wrap {
       @include flex;
       position: relative;
+      overflow: hidden;
 
       > div {
         font-weight: 500;
@@ -1973,11 +1974,6 @@ label.error {
         }
       }
       &.white-btn {
-        @media (min-width: 1025px) {
-          &:hover {
-            // border-left-color: transparent;
-          }
-        }
         @media (max-width: 400px) {
           display: none;
         }
@@ -2689,8 +2685,6 @@ label.error {
 
   &.fixed {
     .header-top {
-      background: white;
-
       .logo-img {
         display: none;
       }

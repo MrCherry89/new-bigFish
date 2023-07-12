@@ -8,6 +8,8 @@ $(document).ready(function () {
   });
 
   $(".links button").hover(function () {
+    $(".links button").removeClass("active");
+    $(this).addClass("active");
     var value = $(this).attr("data-src");
     $(".arkanoid img").attr("src", value);
   });

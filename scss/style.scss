@@ -604,6 +604,11 @@
             width: 100%;
           }
         }
+        &.active {
+          &:after {
+            width: 100%;
+          }
+        }
       }
       .links {
         width: calc((100% - 20px) / 2);
