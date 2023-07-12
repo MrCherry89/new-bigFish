@@ -1738,6 +1738,19 @@ label.error:after {
   gap: 20px;
   grid-template-columns: 1fr 1fr;
 }
+@media (max-width: 1440px) {
+  .cases .portfolio-wrap .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
 @media (max-width: 767px) {
   .cases .portfolio-wrap .info {
     grid-template-columns: 1fr;
@@ -1750,6 +1763,12 @@ label.error:after {
   margin-bottom: 60px;
   max-width: 600px;
   width: 100%;
+}
+@media (max-width: 1440px) {
+  .cases .portfolio-wrap .portfolio-info {
+    width: 40%;
+    max-width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .cases .portfolio-wrap .portfolio-info {
@@ -1850,9 +1869,15 @@ label.error:after {
 .cases .portfolio-wrap .portfolio-info.big {
   max-width: 755px;
 }
+@media (max-width: 1440px) {
+  .cases .portfolio-wrap .portfolio-info.big {
+    width: 50%;
+  }
+}
 @media (max-width: 767px) {
   .cases .portfolio-wrap .portfolio-info.big {
     max-width: 100%;
+    width: 80%;
   }
 }
 
@@ -1988,11 +2013,6 @@ label.error:after {
   margin-left: 12.5%;
 }
 @media (max-width: 1200px) {
-  .header-top .links {
-    margin-left: 1%;
-  }
-}
-@media (max-width: 1024px) {
   .header-top .links {
     display: none;
   }
@@ -2152,6 +2172,7 @@ label.error:after {
   width: 100%;
   height: 100%;
   align-items: center;
+  white-space: nowrap;
 }
 @media (max-width: 1440px) {
   .header-top .buttons .button-hover .button_su_inner {
@@ -2867,6 +2888,7 @@ label.error:after {
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 60px;
+  cursor: default;
 }
 @media (max-width: 1200px) {
   .header .header-info .header-info-wrap .header-subtitle {
@@ -2921,6 +2943,7 @@ label.error:after {
   max-width: 290px;
   margin-left: 32vw;
   margin-right: 5%;
+  cursor: default;
 }
 @media (max-width: 1024px) {
   .header .header-info .header-info-wrap .header-texts {
@@ -2955,6 +2978,7 @@ label.error:after {
   margin-top: 40px;
   text-align: center;
   overflow: hidden;
+  cursor: default;
 }
 @media (max-width: 1024px) {
   .header .header-info .header-info-wrap .header-title {
