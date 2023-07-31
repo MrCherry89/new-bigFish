@@ -241,6 +241,19 @@
       }
     }
   }
+  .title-wrap {
+    @include flex;
+    @include align-center;
+    margin-bottom: 80px;
+    @media (max-width: 1440px) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: 1024px) {
+      margin-bottom: 40px;
+      @include dir-col;
+      align-items: flex-start;
+    }
+  }
   .arrow-btn {
     margin-left: 32vw;
     @media (max-width: 1024px) {
@@ -534,15 +547,22 @@
   @media (max-width: 767px) {
     padding: 0 15px;
   }
-  .main-title {
+  .title-wrap {
     margin-bottom: 80px;
+    @include flex;
+    @include align-center;
     @media (max-width: 1440px) {
       margin-bottom: 60px;
+    }
+    @media (max-width: 1024px) {
+      @include dir-col;
+      align-items: flex-start;
     }
     @media (max-width: 767px) {
       margin-bottom: 30px;
     }
   }
+
   .info-text {
     max-width: 290px;
     overflow: hidden;
@@ -567,7 +587,7 @@
       }
     }
     &.right {
-      margin-left: 32vw;
+      margin-left: 29vw;
       margin-bottom: 90px;
       @media (max-width: 1440px) {
         margin-bottom: 60px;
@@ -578,7 +598,7 @@
       }
     }
     &.left {
-      margin-left: 32vw;
+      margin-left: 29vw;
       margin-top: 90px;
       @media (max-width: 1440px) {
         margin-top: 60px;
@@ -595,25 +615,30 @@
     @include align-center;
   }
   .left-info {
-    width: calc(50% - 10px);
+    width: calc(40% - 10px);
     @include flex;
     @include dir-col;
     background: $black;
+    margin-left: auto;
     padding: 1px;
     transition: 0.3s;
+    @media (max-width: 1400px) {
+      width: calc(50% - 10px);
+    }
     @media (max-width: 1024px) {
       display: none;
     }
     .arkanoid {
       border-radius: 20px;
       background: white;
-      height: 520px;
+      height: 25vw;
       padding: 40px;
       @include flex;
       img {
         animation: pulse 2s ease infinite;
         margin: auto;
-        max-width: 100%;
+        max-width: 250px;
+        width: 100%;
         max-height: 100%;
       }
     }

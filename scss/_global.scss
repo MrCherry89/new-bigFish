@@ -1549,25 +1549,45 @@ label.error {
   }
 }
 
+.discuss-btn-wrap {
+  margin-top: 200px;
+  padding: 0 40px;
+  @media (max-width: 1440px) {
+    padding: 0 30px;
+    margin-top: 150px;
+  }
+  @media (max-width: 1024px) {
+    margin-top: 120px;
+    padding: 0 20px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+}
+
 .main-title {
   @include flex;
   overflow: hidden;
+
   span {
     font-family: $inter;
-    font-weight: 300;
-    font-size: 150px;
+    font-weight: 100;
+    font-size: 9vw;
     line-height: 100%;
     display: inline-block;
     text-transform: uppercase;
+    @include align-center;
+    @include flex;
     @media (max-width: 1440px) {
-      font-size: 120px;
-    }
-    @media (max-width: 1024px) {
-      font-size: 90px;
+      font-size: 8vw;
     }
 
-    @media (max-width: 767px) {
-      font-size: 48px;
+    @media (max-width: 1024px) {
+      font-size: 12vw;
+    }
+    img {
+      width: 7vw;
     }
   }
 }
@@ -1580,6 +1600,29 @@ label.error {
 
     &.aos-animate {
       transform: translateY(0);
+    }
+  }
+}
+
+.subtitle-wrap {
+  margin-left: 10px;
+  overflow: hidden;
+  @media (max-width: 1024px) {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  span {
+    font-family: $inter;
+    font-size: 1.8vw;
+    color: #878787;
+    text-transform: uppercase;
+    display: block;
+    font-weight: normal;
+    @media (max-width: 1440px) {
+      font-size: 1.65vw;
+    }
+    @media (max-width: 767px) {
+      font-size: 3.5vw;
     }
   }
 }
@@ -1609,15 +1652,20 @@ label.error {
       margin-left: 30px;
     }
   }
-  .main-title {
+  .title-wrap {
+    @include flex;
+    @include align-center;
     margin-bottom: 80px;
     @media (max-width: 1440px) {
       margin-bottom: 60px;
     }
     @media (max-width: 1024px) {
       margin-bottom: 40px;
+      @include dir-col;
+      align-items: flex-start;
     }
   }
+
   .portfolio-wrap {
     overflow: hidden;
     max-width: 1530px;
@@ -1713,11 +1761,19 @@ label.error {
           picture {
             @include flex;
             overflow: hidden;
+            img {
+              width: 100%;
+            }
           }
         }
       }
       &.big {
         max-width: 755px;
+        .portfolio-item-img {
+          img {
+            width: 100%;
+          }
+        }
         @media (max-width: 1440px) {
           width: 50%;
         }
@@ -1735,7 +1791,7 @@ label.error {
 }
 
 .portfolio-item-img img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   transition: 1.25s ease !important;
 }
