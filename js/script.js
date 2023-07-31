@@ -14,8 +14,6 @@ $(document).ready(function () {
     $(".arkanoid img").attr("src", value);
   });
 
-  new WOW().init();
-
   $(".personal-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -112,6 +110,53 @@ $(document).ready(function () {
 
   $(".select-wrap select").select2({
     minimumResultsForSearch: -1,
+  });
+
+  $(".personal-slider2").slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: false,
+    autoplaySpeed: 1,
+    speed: 3000,
+    cssEase: "linear",
+    waitForAnimate: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: true,
+        },
+      },
+    ],
+  });
+
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 1);
+
+  $(".accordion-list-item .item-heading").on("click", function (e) {
+    e.preventDefault();
+    if ($(this).find(".show-img").hasClass("rotate")) {
+      $(this).find(".show-img").removeClass("rotate");
+    } else {
+      $(".accordion-list-item .show-img").removeClass("rotate");
+      $(this).find(".show-img").addClass("rotate");
+    }
+    $(".accordion-list-item").removeClass("opened");
+    $(".item-body").removeClass("active");
+    $(this)
+      .closest(".accordion-list-item")
+      .find(".item-body")
+      .addClass("active");
+    $(this).closest(".accordion-list-item").addClass("opened");
+    $(".item-body:not(.active)").slideUp();
+    $(".accordion-list-item:not(.opened)").removeClass("active");
+    $(this).closest(".accordion-list-item").find(".item-body").slideToggle();
+    $(this).closest(".accordion-list-item").toggleClass("active");
   });
 
   $(".popup").magnificPopup({
