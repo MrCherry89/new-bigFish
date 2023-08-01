@@ -1954,8 +1954,56 @@ label.error:after {
   }
 }
 
+.services-wrap {
+  background: white;
+  padding: 180px 50px 0;
+}
+@media (max-width: 1500px) {
+  .services-wrap {
+    padding: 120px 30px 0;
+  }
+}
+@media (max-width: 767px) {
+  .services-wrap {
+    padding: 120px 20px 0;
+  }
+}
+.services-wrap .main-title {
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+@media (max-width: 1024px) {
+  .services-wrap .main-title {
+    margin-bottom: 30px;
+  }
+}
+.services-wrap .services-subtitle {
+  font-weight: 400;
+  font-size: 2.5vw;
+  line-height: 115%;
+  color: #0f0f0f;
+  font-family: "Bedstead";
+  text-transform: uppercase;
+  max-width: 45vw;
+  margin-bottom: 100px;
+}
+@media (max-width: 1700px) {
+  .services-wrap .services-subtitle {
+    font-size: 32px;
+    margin-bottom: 40px;
+    max-width: 660px;
+    line-height: 110%;
+  }
+}
+@media (max-width: 767px) {
+  .services-wrap .services-subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .portfolio-item:hover .portfolio-item-img img {
-  transform: scale(1.2) !important;
+  transform: scale(1.1) !important;
 }
 
 .portfolio-item-img img {
@@ -2656,18 +2704,33 @@ label.error:after {
     opacity: 1;
   }
 }
+.container {
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .container {
+    display: none;
+  }
+}
+
+.hover-image {
+  position: absolute;
+}
+@media (max-width: 1024px) {
+  .hover-image {
+    width: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .hover-image {
+    display: none;
+  }
+}
+
 .accordion-list .accordion-list-item {
   position: relative;
-  overflow: hidden;
-}
-.accordion-list .accordion-list-item .border {
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #0f0f0f;
+  z-index: 0;
+  border-bottom: 1px solid #000;
 }
 .accordion-list .accordion-list-item .item-heading {
   display: -webkit-box;
@@ -2691,7 +2754,7 @@ label.error:after {
 }
 @media (max-width: 767px) {
   .accordion-list .accordion-list-item .item-heading {
-    padding: 20px 0 10px;
+    padding: 20px 0;
   }
 }
 .accordion-list .accordion-list-item .item-heading .show-img {
@@ -2808,30 +2871,25 @@ label.error:after {
     line-height: 20px;
   }
 }
-.accordion-list .accordion-list-item .item-body .text-wrap .white-btn2 {
+.accordion-list .accordion-list-item .item-body .text-wrap .arrow-btn {
   align-self: flex-start;
-  border: 1px solid #0f0f0f;
-  border-radius: 30px;
   margin-top: 40px;
 }
 @media (max-width: 767px) {
-  .accordion-list .accordion-list-item .item-body .text-wrap .white-btn2 {
+  .accordion-list .accordion-list-item .item-body .text-wrap .arrow-btn {
     margin-top: 20px;
   }
 }
-.accordion-list .accordion-list-item .item-body .text-wrap .white-btn2 .button_su_inner {
-  padding: 16px 65px;
+.accordion-list .accordion-list-item .item-body .text-wrap .arrow-btn .btn-info .btn-title .line > span {
+  display: flex !important;
 }
-.accordion-list .accordion-list-item .item-body .text-wrap .white-btn2 .button_su_inner .button_text_container {
-  font-size: 16px;
-  line-height: 110%;
-  font-family: "Inter", sans-serif;
-  letter-spacing: 0.02em;
-  color: #0f0f0f;
-  text-transform: uppercase;
-}
-.accordion-list .accordion-list-item .item-body .text-wrap .white-btn2:hover .button_text_container {
-  color: white;
+.accordion-list .accordion-list-item .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 .accordion-list.style2 .item-body {
   padding-left: 0;
@@ -2850,22 +2908,20 @@ label.error:after {
   }
 }
 .accordion-list.style2 .item-body .video-wrap {
-  margin-top: 40px;
-  width: 100%;
+  margin: 40px auto 0;
+  width: 90%;
   height: 50vw;
 }
-.accordion-list.style2 .item-body .video-wrap iframe {
+@media (max-width: 767px) {
+  .accordion-list.style2 .item-body .video-wrap {
+    width: 100%;
+  }
+}
+.accordion-list.style2 .item-body .video-wrap iframe,
+.accordion-list.style2 .item-body .video-wrap video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.accordion-list.services-list .item-heading {
-  padding-top: 30px;
-}
-@media (max-width: 1500px) {
-  .accordion-list.services-list .item-heading {
-    padding-top: 20px;
-  }
 }
 .accordion-list.services-list .item-heading p,
 .accordion-list.services-list .item-heading b {
@@ -2882,7 +2938,7 @@ label.error:after {
 @media (max-width: 767px) {
   .accordion-list.services-list .item-heading p,
 .accordion-list.services-list .item-heading b {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 100%;
   }
 }
@@ -2932,7 +2988,7 @@ label.error:after {
   overflow: hidden;
 }
 .videos-wrap .video-info1 .video-title span {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 10vw;
   font-family: "Inter", sans-serif;
   color: #0f0f0f;
@@ -2962,7 +3018,7 @@ label.error:after {
   text-align: justify;
   text-transform: uppercase;
   margin-bottom: 120px;
-  font-family: "Inter", sans-serif;
+  font-family: "Bedstead";
   overflow: hidden;
 }
 @media (max-width: 1024px) {
@@ -3353,10 +3409,9 @@ label.error:after {
   }
 }
 .videos-wrap .video-info2 .impact .impact-info .impact-list li b {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Bedstead";
   color: #0f0f0f;
 }
 @media (max-width: 767px) {
@@ -3885,58 +3940,9 @@ label.error:after {
   }
 }
 @font-face {
-  font-family: "SF Pro Display";
-  src: url("SFProDisplay-Medium.eot");
-  src: local("SF Pro Display Medium"), local("SFProDisplay-Medium"), url("../fonts/SFProDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium.woff") format("woff"), url("../fonts/SFProDisplay-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: "Bebas Neue";
   src: url("../fonts/BebasNeueBold.woff2") format("woff2"), url("../fonts/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeueBold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Arsenica Trial";
-  src: url("../fonts/ArsenicaTrial-Medium.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Medium.woff") format("woff"), url("../fonts/ArsenicaTrial-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Arsenica Alt Trial";
-  src: url("../fonts/ArsenicaAltTrial-Regular.woff2") format("woff2"), url("../fonts/ArsenicaAltTrial-Regular.woff") format("woff"), url("../fonts/ArsenicaAltTrial-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Arsenica Trial";
-  src: url("../fonts/ArsenicaTrial-Bold.woff2") format("woff2"), url("../fonts/ArsenicaTrial-Bold.woff") format("woff"), url("../fonts/ArsenicaTrial-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Arsenica Alt Trial";
-  src: url("../fonts/ArsenicaAltTrial-Light.woff2") format("woff2"), url("../fonts/ArsenicaAltTrial-Light.woff") format("woff"), url("../fonts/ArsenicaAltTrial-Light.ttf") format("truetype");
-  font-weight: 300;
   font-style: normal;
 }
 @font-face {

@@ -1786,8 +1786,46 @@ label.error {
   }
 }
 
+.services-wrap {
+  background: white;
+  padding: 180px 50px 0;
+  @media (max-width: 1500px) {
+    padding: 120px 30px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 120px 20px 0;
+  }
+  .main-title {
+    font-weight: 300;
+    margin-bottom: 60px;
+    @media (max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+  }
+  .services-subtitle {
+    font-weight: 400;
+    font-size: 2.5vw;
+    line-height: 115%;
+    color: $black;
+    font-family: "Bedstead";
+    text-transform: uppercase;
+    max-width: 45vw;
+    margin-bottom: 100px;
+    @media (max-width: 1700px) {
+      font-size: 32px;
+      margin-bottom: 40px;
+      max-width: 660px;
+      line-height: 110%;
+    }
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
 .portfolio-item:hover .portfolio-item-img img {
-  transform: scale(1.2) !important;
+  transform: scale(1.1) !important;
 }
 
 .portfolio-item-img img {
@@ -2388,19 +2426,28 @@ label.error {
   }
 }
 
+.container {
+  flex-grow: 1;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hover-image {
+  position: absolute;
+  @media (max-width: 1024px) {
+    width: 20%;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
 .accordion-list {
   .accordion-list-item {
     position: relative;
-    overflow: hidden;
-    .border {
-      position: absolute;
-      z-index: 10;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: $black;
-    }
+    z-index: 0;
+    border-bottom: 1px solid #000;
     .item-heading {
       @include flex;
       @include align-center;
@@ -2413,7 +2460,7 @@ label.error {
         padding-left: 10vw;
       }
       @media (max-width: 767px) {
-        padding: 20px 0 10px;
+        padding: 20px 0;
       }
 
       .show-img {
@@ -2502,32 +2549,31 @@ label.error {
             line-height: 20px;
           }
         }
-        .white-btn2 {
+        .arrow-btn {
           align-self: flex-start;
-          border: 1px solid $black;
-          border-radius: 30px;
           margin-top: 40px;
           @media (max-width: 767px) {
             margin-top: 20px;
           }
-          .button_su_inner {
-            padding: 16px 65px;
-            .button_text_container {
-              font-size: 16px;
-              line-height: 110%;
-              font-family: $inter;
-              letter-spacing: 0.02em;
-              color: $black;
-              text-transform: uppercase;
-            }
-          }
-          &:hover {
-            .button_text_container {
-              color: white;
+          .btn-info {
+            .btn-title {
+              .line {
+                > span {
+                  display: flex !important;
+                }
+              }
             }
           }
         }
       }
+    }
+    .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
     }
   }
   &.style2 {
@@ -2543,11 +2589,14 @@ label.error {
         }
       }
       .video-wrap {
-        margin-top: 40px;
-        width: 100%;
+        margin: 40px auto 0;
+        width: 90%;
         height: 50vw;
-
-        iframe {
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+        iframe,
+        video {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -2557,10 +2606,6 @@ label.error {
   }
   &.services-list {
     .item-heading {
-      padding-top: 30px;
-      @media (max-width: 1500px) {
-        padding-top: 20px;
-      }
       p,
       b {
         font-size: 44px;
@@ -2570,7 +2615,7 @@ label.error {
           line-height: 36px;
         }
         @media (max-width: 767px) {
-          font-size: 24px;
+          font-size: 18px;
           line-height: 100%;
         }
       }
@@ -2608,7 +2653,7 @@ label.error {
       @include flex;
       overflow: hidden;
       span {
-        font-weight: 100;
+        font-weight: 300;
         font-size: 10vw;
         font-family: $inter;
         color: $black;
@@ -2633,7 +2678,7 @@ label.error {
       text-align: justify;
       text-transform: uppercase;
       margin-bottom: 120px;
-      font-family: $inter;
+      font-family: "Bedstead";
       overflow: hidden;
       @media (max-width: 1024px) {
         margin-bottom: 50px;
@@ -2923,10 +2968,9 @@ label.error {
               }
             }
             b {
-              font-weight: 700;
-              font-size: 20px;
-              line-height: 24px;
-              font-family: $inter;
+              font-weight: 400;
+              font-size: 24px;
+              font-family: "Bedstead";
               color: $black;
               @media (max-width: 767px) {
                 font-size: 16px;

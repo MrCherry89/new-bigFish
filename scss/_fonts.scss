@@ -1,84 +1,9 @@
 @font-face {
-  font-family: "SF Pro Display";
-  src: url("SFProDisplay-Medium.eot");
-  src: local("SF Pro Display Medium"), local("SFProDisplay-Medium"),
-    url("../fonts/SFProDisplay-Medium.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/SFProDisplay-Medium.woff2") format("woff2"),
-    url("../fonts/SFProDisplay-Medium.woff") format("woff"),
-    url("../fonts/SFProDisplay-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Bebas Neue";
   src: url("../fonts/BebasNeueBold.woff2") format("woff2"),
     url("../fonts/BebasNeueBold.woff") format("woff"),
     url("../fonts/BebasNeueBold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Arsenica Trial";
-  src: url("../fonts/ArsenicaTrial-Medium.woff2") format("woff2"),
-    url("../fonts/ArsenicaTrial-Medium.woff") format("woff"),
-    url("../fonts/ArsenicaTrial-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("../fonts/Montserrat-Bold.woff") format("woff"),
-    url("../fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("../fonts/Montserrat-Regular.woff") format("woff"),
-    url("../fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
-    url("../fonts/Montserrat-Medium.woff") format("woff"),
-    url("../fonts/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Arsenica Alt Trial";
-  src: url("../fonts/ArsenicaAltTrial-Regular.woff2") format("woff2"),
-    url("../fonts/ArsenicaAltTrial-Regular.woff") format("woff"),
-    url("../fonts/ArsenicaAltTrial-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Arsenica Trial";
-  src: url("../fonts/ArsenicaTrial-Bold.woff2") format("woff2"),
-    url("../fonts/ArsenicaTrial-Bold.woff") format("woff"),
-    url("../fonts/ArsenicaTrial-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Arsenica Alt Trial";
-  src: url("../fonts/ArsenicaAltTrial-Light.woff2") format("woff2"),
-    url("../fonts/ArsenicaAltTrial-Light.woff") format("woff"),
-    url("../fonts/ArsenicaAltTrial-Light.ttf") format("truetype");
-  font-weight: 300;
   font-style: normal;
 }
 
