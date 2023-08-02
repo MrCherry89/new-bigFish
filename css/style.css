@@ -1584,6 +1584,7 @@ label.error:after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .arrow-btn .line {
   display: -webkit-box;
@@ -1703,6 +1704,18 @@ label.error:after {
   }
   [data-aos=new-animation].aos-animate {
     transform: translateY(0);
+  }
+}
+
+[data-aos=new-animation2] {
+  transition-property: transform, opacity;
+}
+@media screen and (min-width: 768px) {
+  [data-aos=new-animation2] {
+    transform: translateX(-100%);
+  }
+  [data-aos=new-animation2].aos-animate {
+    transform: translateX(0);
   }
 }
 
@@ -2308,7 +2321,7 @@ label.error:after {
 .header-top .buttons .button-hover .button_su_inner .button_text_container {
   font-family: "Inter", sans-serif;
 }
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .header-top .buttons .button-hover.white-btn {
     display: none;
   }
@@ -2316,7 +2329,7 @@ label.error:after {
 .header-top .buttons .button-hover.transparent-btn .drop-menu-wrap span {
   font-family: "Inter", sans-serif;
 }
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .header-top .buttons .button-hover.transparent-btn {
     border: none;
   }
@@ -2715,6 +2728,7 @@ label.error:after {
 
 .hover-image {
   position: absolute;
+  z-index: 100;
 }
 @media (max-width: 1024px) {
   .hover-image {
@@ -2730,7 +2744,14 @@ label.error:after {
 .accordion-list .accordion-list-item {
   position: relative;
   z-index: 0;
-  border-bottom: 1px solid #000;
+}
+.accordion-list .accordion-list-item .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
 }
 .accordion-list .accordion-list-item .item-heading {
   display: -webkit-box;
@@ -2910,11 +2931,12 @@ label.error:after {
 .accordion-list.style2 .item-body .video-wrap {
   margin: 40px auto 0;
   width: 90%;
-  height: 50vw;
+  height: 45vw;
 }
 @media (max-width: 767px) {
   .accordion-list.style2 .item-body .video-wrap {
     width: 100%;
+    height: 50vw;
   }
 }
 .accordion-list.style2 .item-body .video-wrap iframe,
@@ -3081,7 +3103,7 @@ label.error:after {
   }
 }
 .videos-wrap .video-info1 .video-text-style p {
-  font-size: 40px;
+  font-size: 2vw;
   line-height: 48px;
   text-align: justify;
   text-transform: uppercase;
@@ -3413,6 +3435,7 @@ label.error:after {
   font-size: 24px;
   font-family: "Bedstead";
   color: #0f0f0f;
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   .videos-wrap .video-info2 .impact .impact-info .impact-list li b {
@@ -3912,7 +3935,7 @@ label.error:after {
     border-right-color: transparent;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .header.fixed .header-top .buttons .transparent-btn {
     border-color: white;
   }
