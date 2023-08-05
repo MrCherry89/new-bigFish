@@ -705,3 +705,24 @@
     }
   }
 }
+
+.split-type {
+  font-kerning: none;
+}
+
+.btns {
+  position: relative;
+}
+.btn {
+  &__title {
+    white-space: nowrap;
+
+    &._title2 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}

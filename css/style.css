@@ -1486,19 +1486,25 @@ label.error:after {
   left: 0;
   right: 0;
 }
-.arrow-btn .btn-info .letter {
+.arrow-btn .btn-info .word {
+  margin-right: 10px;
+}
+.arrow-btn .btn-info .word:last-child {
+  margin-right: 0;
+}
+.arrow-btn .btn-info .char {
   color: #0f0f0f;
   font-family: "Bedstead";
   font-size: 24px;
   text-transform: uppercase;
 }
 @media (max-width: 1440px) {
-  .arrow-btn .btn-info .letter {
+  .arrow-btn .btn-info .char {
     font-size: 20px;
   }
 }
 @media (max-width: 1024px) {
-  .arrow-btn .btn-info .letter {
+  .arrow-btn .btn-info .char {
     font-size: 16px;
   }
 }
@@ -1536,15 +1542,8 @@ label.error:after {
   font-family: "Inter", sans-serif;
   font-weight: 100;
   font-size: 9vw;
-  line-height: 100%;
   display: inline-block;
   text-transform: uppercase;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 @media (max-width: 1440px) {
   .main-title span {
@@ -2454,7 +2453,7 @@ label.error:after {
   display: -ms-flexbox;
   display: flex;
 }
-.header-top .links .link-wrap > div .arrow-btn .letter {
+.header-top .links .link-wrap > div .arrow-btn .char {
   font-size: 17px;
   font-family: "Inter", sans-serif;
   color: white;
@@ -5757,6 +5756,25 @@ label.error:after {
 }
 .technologies .right-info .links-wrap .links.right-links button {
   align-self: start;
+}
+
+.split-type {
+  font-kerning: none;
+}
+
+.btns {
+  position: relative;
+}
+
+.btn__title {
+  white-space: nowrap;
+}
+.btn__title._title2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

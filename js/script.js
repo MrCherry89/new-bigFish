@@ -314,14 +314,14 @@ $(document).ready(function () {
       }
     }
     let typeSplit = new SplitType(".btn-title", {
-      types: "chars",
+      types: "words, chars, lines",
       tagName: "span",
     });
 
     function mainButtonHover() {
       $(".btn").each(function (e) {
-        let o = $(this).find(".title1 .letter"),
-          t = $(this).find(".title2 .letter"),
+        let o = $(this).find(".title1 .char"),
+          t = $(this).find(".title2 .char"),
           i = gsap.timeline({
             paused: !0,
             defaults: {
@@ -405,12 +405,12 @@ $(document).ready(function () {
     });
   })();
 
+  AOS.init();
+
   $(".header-animate").ripples({
     resolution: 256,
     dropRadius: 20,
     perturbance: 0.02,
     imageUrl: "img/home-bg.jpg",
   });
-
-  AOS.init();
 });

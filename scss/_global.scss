@@ -1465,7 +1465,13 @@ label.error {
         right: 0;
       }
     }
-    .letter {
+    .word {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .char {
       color: $black;
       font-family: "Bedstead";
       font-size: 24px;
@@ -1500,16 +1506,12 @@ label.error {
 .main-title {
   @include flex;
   overflow: hidden;
-
   span {
     font-family: $inter;
     font-weight: 100;
     font-size: 9vw;
-    line-height: 100%;
     display: inline-block;
     text-transform: uppercase;
-    @include align-center;
-    @include flex;
     @media (max-width: 1440px) {
       font-size: 8vw;
     }
@@ -2219,7 +2221,7 @@ label.error {
           .line {
             @include flex;
           }
-          .letter {
+          .char {
             font-size: 17px;
             font-family: $inter;
             color: white;
