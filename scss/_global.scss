@@ -1974,11 +1974,6 @@ label.error {
     @media (max-width: 1024px) {
       width: 150px;
     }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
   &.logo-slider {
     margin-bottom: 80px;
@@ -2007,6 +2002,11 @@ label.error {
       @media (max-width: 1440px) {
         padding: 20px;
       }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -2027,6 +2027,27 @@ label.error {
       margin-bottom: 30px;
     }
   }
+  .services-list {
+    .accordion-list-item {
+      .item-heading {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        p,
+        b {
+          font-size: 30px;
+          line-height: 32px;
+          @media (max-width: 1024px) {
+            font-size: 20px;
+            line-height: 100%;
+          }
+          @media (max-width: 767px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
   .services-subtitle {
     font-weight: 400;
     font-size: 2.5vw;
@@ -2035,7 +2056,7 @@ label.error {
     font-family: "Bedstead";
     text-transform: uppercase;
     max-width: 45vw;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     @media (max-width: 1700px) {
       font-size: 32px;
       margin-bottom: 40px;
