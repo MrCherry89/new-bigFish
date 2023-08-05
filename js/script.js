@@ -14,6 +14,23 @@ $(document).ready(function () {
     $(".arkanoid img").attr("src", value);
   });
 
+  var fileInput = document.querySelector(".input-file"),
+    button = document.querySelector(".input-file-trigger"),
+    the_return = document.querySelector(".file-return");
+
+  button.addEventListener("keydown", function (event) {
+    if (event.keyCode == 13 || event.keyCode == 32) {
+      fileInput.focus();
+    }
+  });
+  button.addEventListener("click", function (event) {
+    fileInput.focus();
+    return false;
+  });
+  fileInput.addEventListener("change", function (event) {
+    the_return.innerHTML = this.value;
+  });
+
   $(".personal-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -138,6 +155,28 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
   }, 1);
 
+  var $status = $(".pagingInfo");
+  var $slickElement = $(".pilkington-slider");
+
+  $slickElement.on(
+    "init reInit afterChange",
+    function (event, slick, currentSlide, nextSlide) {
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $status.text(i + " / " + slick.slideCount);
+    }
+  );
+
+  $slickElement.slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 1,
+    variableWidth: true,
+    infinite: false,
+    slidesToScroll: 1,
+    prevArrow: $(".pilkington-slider-wrap .slider-navigation .slick-prev"),
+    nextArrow: $(".pilkington-slider-wrap .slider-navigation .slick-next"),
+  });
+
   $(".accordion-list-item .item-heading").on("click", function (e) {
     e.preventDefault();
     if ($(this).find(".show-img").hasClass("rotate")) {
@@ -177,48 +216,6 @@ $(document).ready(function () {
       .find(".project-item-wrap")
       .addClass("show");
   });
-
-  $(".header").ripples({
-    resolution: 256,
-    dropRadius: 20,
-    perturbance: 0.02,
-    imageUrl: "img/home-bg.jpg",
-  });
-
-  $("#form").validate({
-    rules: {
-      name: {
-        required: true,
-      },
-      phone: {
-        required: true,
-      },
-      email: {
-        required: true,
-      },
-    },
-    messages: {
-      name: {
-        required: "Заполните поле",
-      },
-      phone: {
-        required: "Заполните поле",
-      },
-      email: {
-        required: "Заполните поле",
-      },
-    },
-  });
-
-  $("#form").on("submit", function (e) {
-    e.preventDefault();
-    if ($("#form").valid()) {
-      $(this).closest(".form-wrap").hide();
-      $(".form-valid").show();
-    }
-  });
-
-  AOS.init();
 
   loader();
 
@@ -407,4 +404,13 @@ $(document).ready(function () {
       $(this).find(".services__item-link-circle").addClass("desplode-circle");
     });
   })();
+
+  $(".header-animate").ripples({
+    resolution: 256,
+    dropRadius: 20,
+    perturbance: 0.02,
+    imageUrl: "img/home-bg.jpg",
+  });
+
+  AOS.init();
 });
