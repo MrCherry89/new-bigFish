@@ -411,7 +411,7 @@ $(document).ready(function () {
     resolution: 256,
     dropRadius: 20,
     perturbance: 0.02,
-    imageUrl: "img/home-bg.jpg",
+    imageUrl: $('.header-animate').attr('data-img'),
   });
 });
 
@@ -432,7 +432,7 @@ $(document).ready(function () {
       );
 
       /* Добавление тексту, разделенному через splittype, анимации */
-      const split_type_lines = item.querySelectorAll('span');
+      let split_type_lines = item.querySelectorAll('span');
       if ( split_type_lines.length > 0 ) {
         split_type_lines.forEach((line, index) => {
           let data_parent = line.closest('[data-splittype-lines]'),
