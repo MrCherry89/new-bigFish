@@ -1584,9 +1584,9 @@ label.error {
     max-width: 100%;
     width: 80%;
     margin-bottom: 40px;
-    &:last-child {
-      margin-left: auto;
-    }
+    //&:last-child {
+      //margin-left: auto;
+    //}
   }
   &.hide {
     display: none;
