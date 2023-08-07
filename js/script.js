@@ -414,3 +414,38 @@ $(document).ready(function () {
     imageUrl: "img/home-bg.jpg",
   });
 });
+
+(function() {
+  'use strict';
+
+  /* Разделение текста через splittype */
+  const split_type_init = document.querySelectorAll('[data-splittype-lines]');
+  if ( split_type_init.length > 0 ) {
+    split_type_init.forEach( item => {
+      let split_type = new SplitType( item,
+          {
+            types: item.getAttribute('data-splittype-lines'),
+            tagName: 'span',
+            lineClass: '',
+            charClass: ''
+          }
+      );
+
+      /* Добавление тексту, разделенному через splittype, анимации */
+      const split_type_lines = item.querySelectorAll('span');
+      if ( split_type_lines.length > 0 ) {
+        split_type_lines.forEach((line, index) => {
+          let data_parent = line.closest('[data-splittype-lines]'),
+              data_duration = +data_parent.getAttribute('data-aoss-duration') + +data_parent.getAttribute('data-aoss-duration-step') * index,
+              data_delay = +data_parent.getAttribute('data-aoss-delay') + +data_parent.getAttribute('data-aoss-delay-step') * index;
+          line.setAttribute('data-aos', data_parent.getAttribute('data-aoss'));
+          line.setAttribute('data-aos-offset', data_parent.getAttribute('data-aoss-offset'));
+          line.setAttribute('data-aos-delay', data_delay);
+          line.setAttribute('data-aos-easing', data_parent.getAttribute('data-aoss-easing'));
+          line.setAttribute('data-aos-duration', data_duration);
+        });
+      }
+    });
+  }
+
+})();
