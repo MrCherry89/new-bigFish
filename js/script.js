@@ -18,18 +18,23 @@ $(document).ready(function () {
     button = document.querySelector(".input-file-trigger"),
     the_return = document.querySelector(".file-return");
 
-  button.addEventListener("keydown", function (event) {
-    if (event.keyCode == 13 || event.keyCode == 32) {
+  if ( button ) {
+    button.addEventListener("keydown", function (event) {
+      if (event.keyCode == 13 || event.keyCode == 32) {
+        fileInput.focus();
+      }
+    });
+    button.addEventListener("click", function (event) {
       fileInput.focus();
-    }
-  });
-  button.addEventListener("click", function (event) {
-    fileInput.focus();
-    return false;
-  });
-  fileInput.addEventListener("change", function (event) {
-    the_return.innerHTML = this.value;
-  });
+      return false;
+    });
+  }
+
+  if ( fileInput ) {
+    fileInput.addEventListener("change", function (event) {
+      the_return.innerHTML = this.value;
+    });
+  }
 
   $(".personal-slider").slick({
     slidesToShow: 1,
