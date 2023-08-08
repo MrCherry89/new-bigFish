@@ -3,8 +3,14 @@ $(document).ready(function () {
     var header = $(".header"),
       scroll = $(window).scrollTop();
 
-    if (scroll >= header.height()) header.addClass("fixed");
-    else header.removeClass("fixed");
+    if ( scroll >= header.height() ) {
+      header.addClass("fixed");
+    }
+    else {
+      if ( scroll > 0 ) {
+        header.removeClass("fixed");
+      }
+    }
   });
 
   $(".links button").hover(function () {
