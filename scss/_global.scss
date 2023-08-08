@@ -3939,7 +3939,7 @@ label.error {
     z-index: 0;
     @include flex;
 
-    img {
+    &__bg {
       width: 100%;
       position: absolute;
       top: -1.8%;
@@ -3949,9 +3949,17 @@ label.error {
       height: 106%;
     }
 
-    video {
+    video,
+    &__picture {
       width: 81.6%;
       margin: 0 auto;
+    }
+
+    &__picture {
+      & img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
