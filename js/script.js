@@ -418,11 +418,11 @@ $(document).ready(function () {
 
   AOS.init();
 
-  $(".header-animate").ripples({
+  $(".header-animate-init").ripples({
     resolution: 256,
     dropRadius: 20,
     perturbance: 0.02,
-    imageUrl: $('.header-animate').attr('data-img'),
+    imageUrl: $('.header-animate-init').attr('data-img'),
   });
 });
 
